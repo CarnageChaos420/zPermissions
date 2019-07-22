@@ -1,0 +1,6 @@
+zmcpermissions\PermissionsManager.class
+zmcpermissions\event\PlayerJoin.class
+zmcpermissions\GroupManager.class
+zmcpermissions\command\Permissions.class
+zmcpermissions\event\PlayerQuit.class
+zmcpermissions\Main.class

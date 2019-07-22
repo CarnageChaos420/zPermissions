@@ -1,0 +1,126 @@
+main: zmcpermissions.Main
+version: 0.0.1-SNAPSHOT
+name: ZmcPermissions
+api-version: 1.14
+
+commands:
+  permissions:
+    aliases: [perm]
+    description: Command for ZmcPermissions.
+permissions:
+  zpermissions.*:
+    description: Gives access to all zPermissions commands
+    children:
+        zpermissions.user.permissions.*: true
+        zpermissions.user.group.*: true
+        zpermissions.group.*: true
+        
+  zpermissions.group.*:
+    description: Gives access to all group commands
+    children:
+        zpermissions.group.parents.set: true
+        zpermissions.group.parents.add: true
+        zpermissions.group.parents.remove: true
+        zpermissions.group.permissions.add: true
+        zpermissions.group.permissions.remove: true
+        zpermissions.group.create: true
+        zpermissions.group.delete: true
+        zpermissions.group.default: true
+        zpermissions.group.default.set: true
+        zpermissions.group.prefix.set: true
+        zpermissions.group.suffix.set: true
+         
+  zpermissions.group.parents.set:
+    description: Gives access to /perm group <group> parents set <parent(s)>
+    children:
+        zpermissions.group: true     
+  zpermissions.group.parents.add:
+    description: Gives access to /perm group <group> parents add <parent>
+    children:
+        zpermissions.group: true
+  zpermissions.group.parents.remove:
+    description: Gives access to /perm group <group> parents remove <parent>
+    children:
+        zpermissions.group: true
+  zpermissions.group.permissions.add:
+    description: Gives access to /perm group <group> add <permission>
+    children:
+        zpermissions.group: true  
+  zpermissions.group.permissions.remove:
+    description: Gives access to /perm group <group> remove <permission>
+    children:
+        zpermissions.group: true   
+  zpermissions.group.create:
+    description: Gives access to /perm group <group> create
+    children:
+        zpermissions.group: true
+  zpermissions.group.delete:
+    description: Gives access to /perm group <group> delete
+    children:
+        zpermissions.group: true
+  zpermissions.group.default:
+    description: Gives access to /perm set default group
+    children:
+        zpermissions: true      
+  zpermissions.group.default.set:
+    description: Gives access to /perm default group
+    children:
+        zpermissions: true
+  zpermissions.group.prefix.set:
+    description: Gives access to /perm group <group> prefix <prefix>
+    children:
+        zpermissions.group: true
+  zpermissions.group.suffix.set:
+    description: Gives access to /perm group <group> suffix <suffix>
+    children:
+        zpermissions.group: true
+                  
+        
+        
+  zpermissions.user.permissions.*:
+    description: Gives access to /perm user <player> add <permission>
+    children:
+        zpermissions.user.permissions.add: true
+        zpermissions.user.permissions.remove: true
+  zpermissions.user.permissions.add:
+    description: Gives access to /perm user <player> add <permission>
+    children:
+        zpermissions.user: true
+  zpermissions.user.permissions.remove:
+    description: Gives access to /perm user <player> remove <permission>
+    children:
+        zpermissions.user: true
+        
+        
+        
+  zpermissions.user.group.*:
+    description: Gives access to all user group commands
+    children:
+        zpermissions.user.group.set: true
+        zpermissions.user.group.add: true  
+        zpermissions.user.group.remove: true 
+  zpermissions.user.group.set:
+    description: Gives access to /perm user <player> group set <group>
+    children:
+        zpermissions.user: true
+  zpermissions.user.group.add:
+    description: Gives access to /perm user <player> group add <group>
+    children:
+        zpermissions.user: true
+  zpermissions.user.group.remove:
+    description: Gives access to /perm user <player> group remove <group>
+    children:
+        zpermissions.user: true
+    
+    
+  zpermissions.group:
+    description: Gives access to /perm group [group]
+    children:
+        zpermissions: true
+  zpermissions.user:
+    description: Gives access to /perm user <player>
+    children:
+        zpermissions: true
+  zpermissions:
+    description: Gives access to /perm
+    
