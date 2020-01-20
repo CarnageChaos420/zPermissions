@@ -1,12 +1,12 @@
-main: zmcpermissions.Main
+main: zpermissions.Main
 version: 0.0.1-SNAPSHOT
-name: ZmcPermissions
-api-version: 1.14
+name: ZPermissions
+api-version: 1.15
 
 commands:
   permissions:
     aliases: [perm]
-    description: Command for ZmcPermissions.
+    description: Command for ZPermissions.
 permissions:
   zpermissions.*:
     description: Gives access to all zPermissions commands

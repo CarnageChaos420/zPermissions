@@ -1,4 +1,4 @@
-package zmcpermissions;
+package zpermissions;
 
 import java.io.File;
 import java.io.IOException;
