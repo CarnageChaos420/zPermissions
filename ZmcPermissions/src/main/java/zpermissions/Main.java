@@ -1,4 +1,4 @@
-package zmcpermissions;
+package zpermissions;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,9 +9,9 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import zmcpermissions.command.Permissions;
-import zmcpermissions.event.PlayerJoin;
-import zmcpermissions.event.PlayerQuit;
+import zpermissions.command.Permissions;
+import zpermissions.event.PlayerJoin;
+import zpermissions.event.PlayerQuit;
 
 
 

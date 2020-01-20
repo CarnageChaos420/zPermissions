@@ -1,4 +1,4 @@
-package zmcpermissions.command;
+package zpermissions.command;
 
 import java.util.Arrays;
 import java.util.List;
@@ -10,7 +10,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
 import net.md_5.bungee.api.ChatColor;
-import zmcpermissions.Main;
+import zpermissions.Main;
 
 public class Permissions implements CommandExecutor{
 	
